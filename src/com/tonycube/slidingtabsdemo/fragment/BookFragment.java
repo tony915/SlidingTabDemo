@@ -2,7 +2,8 @@ package com.tonycube.slidingtabsdemo.fragment;
 
 import com.tonycube.slidingtabsdemo.R;
 import com.tonycube.slidingtabsdemo.log.DLog;
-import com.tonycube.slidingtabsdemo.tab.BasicFragment;
+import com.tonycube.slidingtabsdemo.tab.BaseFragment;
+
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class BookFragment extends BasicFragment {
+
+public class BookFragment extends BaseFragment {
 	
 	private static final String DATA_NAME = "name";
 	
@@ -23,6 +25,7 @@ public class BookFragment extends BasicFragment {
 		f.setIndicatorColor(indicatorColor);
 		f.setDividerColor(dividerColor);
 		f.setIconResId(iconResId);
+
 		
 		//pass data
 		Bundle args = new Bundle();
@@ -53,7 +56,6 @@ public class BookFragment extends BasicFragment {
 		DLog.d("BookFragment - onViewCreated");
 		TextView txtName = (TextView) view.findViewById(R.id.txtName);
 		txtName.setText(title);
-		DLog.d(title);
 	}
 
 	@Override

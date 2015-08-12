@@ -4,24 +4,23 @@ import java.util.LinkedList;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
-import com.tonycube.slidingtabsdemo.tab.BasicFragment;
+import com.tonycube.slidingtabsdemo.tab.BaseFragment;
 
 public class TabFragmentPagerAdapter extends FragmentPagerAdapter {
 
-	LinkedList<BasicFragment> fragments = null;
+	LinkedList<BaseFragment> fragments = null;
 	
-	public TabFragmentPagerAdapter(FragmentManager fm, LinkedList<BasicFragment> fragments) {
+	public TabFragmentPagerAdapter(FragmentManager fm, LinkedList<BaseFragment> fragments) {
 		super(fm);
 		if (fragments == null) {
-			this.fragments = new LinkedList<BasicFragment>();
+			this.fragments = new LinkedList<BaseFragment>();
 		}else{
 			this.fragments = fragments;
 		}
 	}
 
 	@Override
-	public BasicFragment getItem(int position) {
+	public BaseFragment getItem(int position) {
 		return fragments.get(position);
 	}
 

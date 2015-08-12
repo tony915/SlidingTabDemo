@@ -3,7 +3,7 @@ package com.tonycube.slidingtabsdemo.tab;
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
 
-public class BasicFragment extends Fragment {
+public class BaseFragment extends Fragment {
 	
 	private String title = "";
 	private int indicatorColor = Color.BLUE;

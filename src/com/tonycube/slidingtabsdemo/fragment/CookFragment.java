@@ -2,15 +2,15 @@ package com.tonycube.slidingtabsdemo.fragment;
 
 import com.tonycube.slidingtabsdemo.R;
 import com.tonycube.slidingtabsdemo.log.DLog;
-import com.tonycube.slidingtabsdemo.tab.BasicFragment;
-
+import com.tonycube.slidingtabsdemo.tab.BaseFragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class CookFragment extends BasicFragment {
+
+public class CookFragment extends BaseFragment {
 	
 	private static final String DATA_NAME = "name";
 	

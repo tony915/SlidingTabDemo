@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 import com.tonycube.slidingtabsdemo.R;
 import com.tonycube.slidingtabsdemo.adapter.TabFragmentPagerAdapter;
-import com.tonycube.slidingtabsdemo.tab.BasicFragment;
+import com.tonycube.slidingtabsdemo.tab.BaseFragment;
 import com.tonycube.slidingtabsdemo.tab.SlidingTabLayout;
 
 import android.graphics.Color;
@@ -28,16 +28,14 @@ public class TabFragment extends Fragment {
 	}
 	
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.frg_tab, container, false);
 	}
 	
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
 		//adapter
-		final LinkedList<BasicFragment> fragments = getFragments();
+		final LinkedList<BaseFragment> fragments = getFragments();
 		adapter = new TabFragmentPagerAdapter(getFragmentManager(), fragments);
 		//pager
 		pager = (ViewPager) view.findViewById(R.id.pager);
@@ -62,11 +60,11 @@ public class TabFragment extends Fragment {
 		
 	}
 	
-	private LinkedList<BasicFragment> getFragments(){
+	private LinkedList<BaseFragment> getFragments(){
 		int indicatorColor = Color.parseColor(this.getResources().getString(R.color.color_accent));
 		int dividerColor = Color.TRANSPARENT;
 		
-		LinkedList<BasicFragment> fragments = new LinkedList<BasicFragment>();
+		LinkedList<BaseFragment> fragments = new LinkedList<BaseFragment>();
 		fragments.add(BookFragment.newInstance("Book", indicatorColor, dividerColor, android.R.drawable.ic_dialog_info));
 		fragments.add(CookFragment.newInstance("Cook", indicatorColor, dividerColor, android.R.drawable.ic_dialog_map));
 		fragments.add(FoodFragment.newInstance("Food", indicatorColor, dividerColor, android.R.drawable.ic_dialog_email));
@@ -76,5 +74,4 @@ public class TabFragment extends Fragment {
 		return fragments;
 	}
 	
-
 }

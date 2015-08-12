@@ -2,15 +2,15 @@ package com.tonycube.slidingtabsdemo.fragment;
 
 import com.tonycube.slidingtabsdemo.R;
 import com.tonycube.slidingtabsdemo.log.DLog;
-import com.tonycube.slidingtabsdemo.tab.BasicFragment;
-
+import com.tonycube.slidingtabsdemo.tab.BaseFragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class WoodFragment extends BasicFragment {
+
+public class WoodFragment extends BaseFragment {
 	
 	private static final String DATA_NAME = "name";
 	
@@ -18,12 +18,14 @@ public class WoodFragment extends BasicFragment {
 	
 	public static WoodFragment newInstance(String title, int indicatorColor,
             int dividerColor, int iconResId) {
+
 		DLog.d("WoodFragment - newInstance");
 		WoodFragment f = new WoodFragment();
 		f.setTitle(title);
 		f.setIndicatorColor(indicatorColor);
 		f.setDividerColor(dividerColor);
 		f.setIconResId(iconResId);
+
 		
 		//pass data
 		Bundle args = new Bundle();
