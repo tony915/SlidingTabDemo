@@ -35,6 +35,8 @@ public class TabFragmentPagerAdapter extends FragmentPagerAdapter {
 		return fragments.get(position).getTitle();
 	}
 	
-	
+	public int getIconResId(int position) {
+		return fragments.get(position).getIconResId();
+	}
 
 }

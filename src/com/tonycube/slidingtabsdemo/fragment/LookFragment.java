@@ -17,12 +17,13 @@ public class LookFragment extends BasicFragment {
 	private String title = "";
 	
 	public static LookFragment newInstance(String title, int indicatorColor,
-            int dividerColor) {
+            int dividerColor, int iconResId) {
 		DLog.d("LookFragment - newInstance");
 		LookFragment f = new LookFragment();
 		f.setTitle(title);
 		f.setIndicatorColor(indicatorColor);
 		f.setDividerColor(dividerColor);
+		f.setIconResId(iconResId);
 		
 		//pass data
 		Bundle args = new Bundle();

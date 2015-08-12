@@ -17,12 +17,13 @@ public class FoodFragment extends BasicFragment {
 	private String title = "";
 	
 	public static FoodFragment newInstance(String title, int indicatorColor,
-            int dividerColor) {
+            int dividerColor, int iconResId) {
 		DLog.d("FoodFragment - newInstance");
 		FoodFragment f = new FoodFragment();
 		f.setTitle(title);
 		f.setIndicatorColor(indicatorColor);
 		f.setDividerColor(dividerColor);
+		f.setIconResId(iconResId);
 		
 		//pass data
 		Bundle args = new Bundle();

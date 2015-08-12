@@ -17,12 +17,13 @@ public class GoodFragment extends BasicFragment {
 	private String title = "";
 	
 	public static GoodFragment newInstance(String title, int indicatorColor,
-            int dividerColor) {
+            int dividerColor, int iconResId) {
 		DLog.d("GoodFragment - newInstance");
 		GoodFragment f = new GoodFragment();
 		f.setTitle(title);
 		f.setIndicatorColor(indicatorColor);
 		f.setDividerColor(dividerColor);
+		f.setIconResId(iconResId);
 		
 		//pass data
 		Bundle args = new Bundle();

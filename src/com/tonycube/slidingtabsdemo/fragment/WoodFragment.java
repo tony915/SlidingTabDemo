@@ -17,12 +17,13 @@ public class WoodFragment extends BasicFragment {
 	private String title = "";
 	
 	public static WoodFragment newInstance(String title, int indicatorColor,
-            int dividerColor) {
+            int dividerColor, int iconResId) {
 		DLog.d("WoodFragment - newInstance");
 		WoodFragment f = new WoodFragment();
 		f.setTitle(title);
 		f.setIndicatorColor(indicatorColor);
 		f.setDividerColor(dividerColor);
+		f.setIconResId(iconResId);
 		
 		//pass data
 		Bundle args = new Bundle();

@@ -16,12 +16,13 @@ public class BookFragment extends BasicFragment {
 	
 	private String title = "";
 	
-	public static BookFragment newInstance(String title, int indicatorColor, int dividerColor) {
+	public static BookFragment newInstance(String title, int indicatorColor, int dividerColor, int iconResId) {
 		DLog.d("BookFragment - newInstance");
 		BookFragment f = new BookFragment();
 		f.setTitle(title);
 		f.setIndicatorColor(indicatorColor);
 		f.setDividerColor(dividerColor);
+		f.setIconResId(iconResId);
 		
 		//pass data
 		Bundle args = new Bundle();

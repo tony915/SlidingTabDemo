@@ -8,6 +8,7 @@ public class BasicFragment extends Fragment {
 	private String title = "";
 	private int indicatorColor = Color.BLUE;
 	private int dividerColor = Color.GRAY;
+	private int iconResId = 0;
 	
 	public String getTitle() {
 		return title;
@@ -27,5 +28,11 @@ public class BasicFragment extends Fragment {
 	public void setDividerColor(int dividerColor) {
 		this.dividerColor = dividerColor;
 	}
-	
+	//
+	public int getIconResId() {
+		return iconResId;
+	}
+	public void setIconResId(int iconResId) {
+		this.iconResId = iconResId;
+	}
 }

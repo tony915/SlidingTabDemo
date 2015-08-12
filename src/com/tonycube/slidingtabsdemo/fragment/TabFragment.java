@@ -57,22 +57,22 @@ public class TabFragment extends Fragment {
 			}
 		});
 		tabs.setBackgroundResource(R.color.color_primary);
+		tabs.setCustomTabView(R.layout.tab_title, R.id.txtTabTitle, R.id.imgTabIcon);
 		tabs.setViewPager(pager);
+		
 	}
 	
 	private LinkedList<BasicFragment> getFragments(){
-		//統一顏色，每個tab底線可自定顏色
 		int indicatorColor = Color.parseColor(this.getResources().getString(R.color.color_accent));
-		//分隔線顏色，透明
 		int dividerColor = Color.TRANSPARENT;
 		
 		LinkedList<BasicFragment> fragments = new LinkedList<BasicFragment>();
-		fragments.add(BookFragment.newInstance("Book", indicatorColor, dividerColor));
-		fragments.add(CookFragment.newInstance("Cook", indicatorColor, dividerColor));
-		fragments.add(FoodFragment.newInstance("Food", indicatorColor, dividerColor));
-		fragments.add(GoodFragment.newInstance("Good", Color.BLUE, dividerColor));
-		fragments.add(LookFragment.newInstance("Look", Color.CYAN, dividerColor));
-		fragments.add(WoodFragment.newInstance("Wood", Color.MAGENTA, dividerColor));
+		fragments.add(BookFragment.newInstance("Book", indicatorColor, dividerColor, android.R.drawable.ic_dialog_info));
+		fragments.add(CookFragment.newInstance("Cook", indicatorColor, dividerColor, android.R.drawable.ic_dialog_map));
+		fragments.add(FoodFragment.newInstance("Food", indicatorColor, dividerColor, android.R.drawable.ic_dialog_email));
+		fragments.add(GoodFragment.newInstance("Good", Color.BLUE, dividerColor, android.R.drawable.ic_lock_power_off));
+		fragments.add(LookFragment.newInstance("Look", Color.CYAN, dividerColor, android.R.drawable.ic_dialog_dialer));
+		fragments.add(WoodFragment.newInstance("Wood", Color.MAGENTA, dividerColor, android.R.drawable.ic_media_play));
 		return fragments;
 	}
 	
