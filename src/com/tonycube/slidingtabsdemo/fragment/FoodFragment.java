@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
+
 public class FoodFragment extends BaseFragment {
 	
 	private static final String DATA_NAME = "name";
