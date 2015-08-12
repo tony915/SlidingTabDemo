@@ -17,12 +17,10 @@
 package com.tonycube.slidingtabsdemo.tab;
  
 import com.tonycube.slidingtabsdemo.adapter.TabFragmentPagerAdapter;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -78,6 +76,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
     private int mTabViewLayoutId;
     private int mTabViewTextViewId;
     private int mTabViewIconId;
+
  
     private ViewPager mViewPager;
     private ViewPager.OnPageChangeListener mViewPagerPageChangeListener;
@@ -202,7 +201,6 @@ public class SlidingTabLayout extends HorizontalScrollView {
     }
  
     private void populateTabStrip() {
-//        final PagerAdapter adapter = mViewPager.getAdapter();
         final TabFragmentPagerAdapter adapter = (TabFragmentPagerAdapter) mViewPager.getAdapter();
         final View.OnClickListener tabClickListener = new TabClickListener();
  
@@ -222,6 +220,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
             if (tabIcon != null) {
 				tabIcon.setImageResource(adapter.getIconResId(i));
 			}
+
  
             if (tabView == null) {
                 tabView = createDefaultTabView(getContext());

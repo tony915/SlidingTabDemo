@@ -3,12 +3,12 @@ package com.tonycube.slidingtabsdemo.fragment;
 import com.tonycube.slidingtabsdemo.R;
 import com.tonycube.slidingtabsdemo.log.DLog;
 import com.tonycube.slidingtabsdemo.tab.BasicFragment;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 
 public class CookFragment extends BasicFragment {
 	

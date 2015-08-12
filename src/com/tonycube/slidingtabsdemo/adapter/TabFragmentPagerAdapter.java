@@ -4,7 +4,6 @@ import java.util.LinkedList;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
 import com.tonycube.slidingtabsdemo.tab.BasicFragment;
 
 public class TabFragmentPagerAdapter extends FragmentPagerAdapter {
